@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
   <link rel="stylesheet" href="./assets/css/style.css" />
+ 
   <title>Task Board</title>
 </head>
 
@@ -22,9 +23,28 @@
   </header>
   <div class="container">
     <div class="text-center mb-5">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
+      <button class="btn btn-success" id = "add-task-btn" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
     <!-- Todo: Create a modal with a form to add tasks -->
+    <div id="modalForm" class="card col-lg" title="Add New Item" style="display: none;">
+    
+    <form id="itemForm">
+        <div class="row">
+            <label for="title" class="col-6">Title:</label>
+            <input type="text" class="form-control-lg col-6" id="title" name="title">
+        </div>
+        
+        <div class="row">
+            <label for="datepicker" class="col-6">Date:</label>
+            <input type="text" class="form-control-lg col-6" id="datepicker" name="date">
+        </div>
+        
+        <label for="description">Description:</label>
+        <input type="text" class="form-control-lg col-12" id="description" name="description">
+    </form>
+</div>
+ 
+
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">

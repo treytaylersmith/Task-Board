@@ -14,3 +14,7 @@ body {
 .task-card:hover {
   cursor: grab;
 }
+#itemForm{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
